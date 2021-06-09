@@ -1,7 +1,8 @@
+import Header from "components/Layout/Header";
 import React from "react";
 
 function App() {
-  return <div className="App">dk</div>;
+  return <Header />;
 }
 
 export default App;
