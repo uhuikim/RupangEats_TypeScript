@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { ReactComponent as Logo } from "../../icon/svg/Logo.svg";
 
 interface Props {
   onClickTitle: () => void;
@@ -8,7 +9,10 @@ interface Props {
 const Header: React.FC = () => {
   return (
     <Wrapper>
-      <Title>header</Title>
+      <LogoWrap>
+        <Logo />
+        <Title>루팡 Eats</Title>
+      </LogoWrap>
     </Wrapper>
   );
 };
@@ -16,14 +20,23 @@ const Header: React.FC = () => {
 export default Header;
 
 const Wrapper = styled.div`
-  background-color: #282828;
   height: 3rem;
-  color: white;
   margin-bottom: 1rem;
+  background-color: ${({ theme }) => theme.bgStep1};
+`;
+
+const LogoWrap = styled.a`
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  & > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 `;
 
 const Title = styled.div`
-  line-height: 3rem;
-  margin-left: 2rem;
-  cursor: pointer;
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
 `;
