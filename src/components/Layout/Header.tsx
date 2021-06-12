@@ -20,15 +20,17 @@ const Header: React.FC = () => {
 export default Header;
 
 const Wrapper = styled.div`
-  height: 3rem;
+  height: 4rem;
   margin-bottom: 1rem;
-  background-color: ${({ theme }) => theme.bgDimd};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const LogoWrap = styled.a`
   display: flex;
   cursor: pointer;
-  align-items: center;
+  align-items: flex-end;
 
   & > svg {
     width: 2.5rem;
@@ -37,6 +39,7 @@ const LogoWrap = styled.a`
 `;
 
 const Title = styled.div`
-  font-size: 1.7rem;
-  margin-left: 0.5rem;
+  font-family: "HiMelody-Regular";
+  font-size: 1.8rem;
+  margin-left: 0.3rem;
 `;
