@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ReactComponent as Logo } from "../../icon/svg/Logo.svg";
+import { ReactComponent as Logo } from "icon/svg/Logo.svg";
 
 interface Props {
   onClickTitle: () => void;
@@ -22,7 +22,7 @@ export default Header;
 const Wrapper = styled.div`
   height: 3rem;
   margin-bottom: 1rem;
-  background-color: ${({ theme }) => theme.bgStep1};
+  background-color: ${({ theme }) => theme.bgDimd};
 `;
 
 const LogoWrap = styled.a`
