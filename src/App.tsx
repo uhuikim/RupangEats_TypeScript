@@ -4,12 +4,8 @@ import Header from "components/Layout/Header";
 
 import { ThemeProvider } from "globals/theme";
 
-function App() {
-  return (
-    <ThemeProvider>
-      <Header />
-    </ThemeProvider>
-  );
-}
+const App: React.FC = ({ children }) => {
+  return <ThemeProvider>{children}</ThemeProvider>;
+};
 
 export default App;
