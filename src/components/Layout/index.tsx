@@ -6,7 +6,8 @@ import Header from "./Header";
 const Layout: React.FC = ({ children }) => {
   return (
     <Wrapper>
-      <Header>{children}</Header>
+      <Header />
+      {children}
       <Footer />
     </Wrapper>
   );
