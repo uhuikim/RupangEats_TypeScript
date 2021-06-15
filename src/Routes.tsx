@@ -1,19 +1,50 @@
-import Layout from "components/Layout";
-import React from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import React from 'react';
+import { Route, BrowserRouter as Router, Switch, RouteComponentProps } from 'react-router-dom';
 
-import home from "pages/home/Index";
-import ShopsRegister from "pages/shops/ShopsRegister";
+import MainLayout from 'components/Layout/MainLayout';
+import AdminLayout from 'components/Layout/AdminLayout';
+import Home from 'pages/home/index';
+import ShopsRegister from 'pages/shops/ShopsRegister';
+
+interface Props {
+  component: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
+  exact: boolean;
+  path: string;
+}
+
+const MainLayoutRoute: React.FC<Props> = React.memo(({ component: Component, ...params }) => {
+  return (
+    <Route
+      {...params}
+      render={(props) => (
+        <MainLayout>
+          <Component {...props} />
+        </MainLayout>
+      )}
+    />
+  );
+});
+
+const AdminRoute: React.FC<Props> = React.memo(({ component: Component, ...params }) => {
+  return (
+    <Route
+      {...params}
+      render={(props) => (
+        <AdminLayout>
+          <Component {...props} />
+        </AdminLayout>
+      )}
+    />
+  );
+});
 
 const Routes: React.FC = () => {
   return (
     <Router>
-      <Layout>
-        <Switch>
-          <Route exact path="/" component={home} />
-          <Route exact path="/admin/shops" component={ShopsRegister} />
-        </Switch>
-      </Layout>
+      <Switch>
+        <MainLayoutRoute exact path='/' component={Home} />
+        <AdminRoute exact path='/admin/shops' component={ShopsRegister} />
+      </Switch>
     </Router>
   );
 };
