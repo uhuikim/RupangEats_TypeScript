@@ -1,8 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { ThemeProvider } from "globals/theme";
+import { ThemeProvider } from 'globals/theme';
 
-const App: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const App: React.FC<Props> = ({ children }: Props) => {
   return <ThemeProvider>{children}</ThemeProvider>;
 };
 

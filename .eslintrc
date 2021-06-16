@@ -12,6 +12,7 @@
       "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/no-empty-interface": "off",
       "react-hooks/exhaustive-deps": "warn",
+      "react/display-name": "off",
       "eqeqeq": "error"
     },
     "settings": {

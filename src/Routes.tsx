@@ -12,7 +12,7 @@ interface Props {
   path: string;
 }
 
-const MainLayoutRoute: React.FC<Props> = React.memo(({ component: Component, ...params }) => {
+const MainLayoutRoute: React.FC<Props> = React.memo(({ component: Component, ...params }: Props) => {
   return (
     <Route
       {...params}
@@ -25,7 +25,7 @@ const MainLayoutRoute: React.FC<Props> = React.memo(({ component: Component, ...
   );
 });
 
-const AdminRoute: React.FC<Props> = React.memo(({ component: Component, ...params }) => {
+const AdminRoute: React.FC<Props> = React.memo(({ component: Component, ...params }: Props) => {
   return (
     <Route
       {...params}
