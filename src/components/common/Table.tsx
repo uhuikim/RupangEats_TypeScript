@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const Table = () => {
-  return <Wrapper>dk</Wrapper>;
+  return <Wrapper>adkjfk</Wrapper>;
 };
 
 export default Table;
