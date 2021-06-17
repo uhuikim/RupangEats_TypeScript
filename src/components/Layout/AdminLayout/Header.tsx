@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <Wrapper>
-      <Title>header</Title>
+      <Title>Admin</Title>
     </Wrapper>
   );
 };
